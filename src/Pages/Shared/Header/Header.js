@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+    const [theme , setTheme] = useState('cmyk');
+    const handleTheme = () =>{
+        theme === 'cmyk' ? setTheme('night') : setTheme('cmyk');
+    }
+
+    useEffect(()=>{
+        document.body.setAttribute('data-theme' , theme);
+    },[theme])
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -44,7 +53,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">Get started</Link>
+                    <Link className="btn" onClick={handleTheme}>Get started</Link>
                 </div>
             </div>
         </div>
