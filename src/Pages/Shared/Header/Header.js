@@ -40,7 +40,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     <span className='mr-2 text-lg font-semibold text-secondary'>{theme==='cmyk' ? 'Light' : 'Dark'}</span>
-                    <input type="checkbox" class="toggle toggle-md" onClick={handleTheme}/>
+                    <input type="checkbox" className="toggle toggle-md" onClick={handleTheme}/>
                 </div>
             </div>
         </div>
