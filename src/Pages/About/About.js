@@ -6,7 +6,7 @@ import rakib from '../../images/rakib.jpg'
 const About = () => {
   return (
     <div>
-      <div className=" px-4 py-6 text-3xl font-semibold text-center">About
+      <div className=" px-4 py-6 text-3xl font-semibold text-center text-secondary-focus text-bold">About
         Abacus Academy
 
 
@@ -19,14 +19,14 @@ const About = () => {
         <div className="card w-96 bg-base-100 shadow-2xl">
           <figure><img src={ismail} className='mask mask-circle object-cover w-24' alt="Shoes" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Mohammad Ismail Emon</h2>
+            <h2 className="card-title text-secondary">Mohammad Ismail Emon</h2>
             <p>CEO</p>
           </div>
         </div>
         <div className="card w-96 bg-base-100 shadow-2xl pt-5">
           <figure><img src={rakib} className='mask mask-circle object-cover w-24' alt="Shoes" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Muhammed Rakibul Hasan</h2>
+            <h2 className="card-title text-secondary">Muhammed Rakibul Hasan</h2>
             <p>CEO</p>
           </div>
         </div>

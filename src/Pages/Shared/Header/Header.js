@@ -13,9 +13,9 @@ const Header = () => {
     }, [theme]);
 
     const navItems = <>
-        <li><NavLink className={({ isActive }) => (isActive ? 'text-primary' : '')} to='/'>Home</NavLink></li>
-        <li><NavLink className={({ isActive }) => (isActive ? 'text-primary' : '')} to='/contact'>Contact</NavLink></li>
-        <li><NavLink className={({ isActive }) => (isActive ? 'text-primary' : '')} to='/about'>About</NavLink></li>
+        <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/'>Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/contact'>Contact</NavLink></li>
+        <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/about'>About</NavLink></li>
     </>
 
     return (
