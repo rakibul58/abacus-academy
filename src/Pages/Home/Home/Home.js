@@ -1,15 +1,10 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     return (
         <div>
-            <h1 className='text-4xl font-bold text-primary'>Hello</h1>
-            <h1 className='text-4xl font-bold text-secondary'>Hello</h1>
-            <h1 className='text-4xl font-bold text-error'>Hello</h1>
-            <h1 className='text-4xl font-bold text-warning'>Hello</h1>
-            <h1 className='text-4xl font-bold text-primary'>Hello</h1>
-
-            <h1>from emon</h1>
+            <Banner></Banner>
         </div>
     );
 };
