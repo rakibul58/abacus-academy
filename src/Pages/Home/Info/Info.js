@@ -2,7 +2,12 @@ import React from 'react';
 
 const Info = () => {
   return (
-    <div className='my-20'>
+    <div className='mt-36 mb-36'>
+      <div>
+        <h3 className='text-center text-error font-bold text-xl'>About Us</h3>
+        <h1 className='text-center font-semibold text-3xl m-3'>Our Specialty</h1>
+        <p className='text-center m-5'>We are the best free online Courses provider and we believe in Quality.  <br /> Our Goal is spreading knowledge around.</p>
+      </div>
       <section className="p-6 my-6 text-gray-800">
         <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
           <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-base text-warning">

@@ -7,7 +7,7 @@ import MyPhotoViewer from '../../../components/MyPhotoViewer';
 
 const CoreFeatures = () => {
     return (
-        <div className='mt-12'>
+        <div className='mt-24'>
             <div>
                 <h3 className='text-center text-error font-bold text-xl'>Core Features</h3>
                 <h1 className='text-center font-semibold text-3xl m-3'> Why Choose Us</h1>

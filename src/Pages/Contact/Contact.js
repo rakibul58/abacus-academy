@@ -24,7 +24,7 @@ const Contact = () => {
                 <div className="flex flex-col justify-between">
                     <div className="space-y-2 text-center lg:text-left">
                         <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
-                        <div className="text-gray-600">Vivamus in nisl metus? Phasellus.</div>
+                        <div className="text-gray-600">Ask us what you want to know?</div>
                     </div>
                     <img src={contact} alt="" className="mt-[-90px] mx-auto" />
                 </div>

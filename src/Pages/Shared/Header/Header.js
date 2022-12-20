@@ -16,6 +16,7 @@ const Header = () => {
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/'>Home</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/contact'>Contact</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/about'>About</NavLink></li>
+        <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/login'>Login</NavLink></li>
     </>
 
     return (
