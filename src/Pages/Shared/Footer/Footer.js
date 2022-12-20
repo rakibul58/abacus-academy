@@ -17,11 +17,11 @@ const Footer = () => {
                
             </div>
             <div>
-                <span className="footer-title">Company</span>
-                <Link className="link link-hover">About us</Link>
-                <Link className="link link-hover">Contact</Link>
-                <Link className="link link-hover">Mentor</Link>
-            
+                <span className="footer-title">Important Links</span>
+                <Link to='/' className="link link-hover">Home</Link>
+                <Link to='/about' className="link link-hover">About us</Link>
+                <Link to='/contact' className="link link-hover">Contact</Link>
+                <Link to='/login' className="link link-hover">Login</Link>
             </div>
             <div>
                 <span className="footer-title">Legal</span>

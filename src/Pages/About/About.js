@@ -7,7 +7,7 @@ import rakib from '../../images/rakib.jpg'
 
 const About = () => {
   return (
-    <div className='px-4'>
+    <div className='px-4 mt-24 mb-36'>
       <MyHelmet>About</MyHelmet>
       <h1 className=" px-4 py-6 text-3xl font-semibold text-center text-secondary-focus text-bold">
         About Abacus Academy
@@ -15,7 +15,7 @@ const About = () => {
       <p className='text-1xl font-semibold text-center py-2'>
         Our objective is to create a skillful nation<br /> and spreading knowledge around. So join us if you also want to be enlightened.
       </p>
-      <div className='flex flex-wrap justify-center gap-10 my-10'>
+      <div className='flex flex-wrap justify-center mt-16 gap-10 mb-10'>
         <div className="card w-96 bg-base-100 shadow-2xl">
           <figure><MyPhotoViewer src={ismail}><img src={ismail} className='mask mask-circle object-cover w-24' alt="Shoes" /></MyPhotoViewer></figure>
           <div className="card-body">
