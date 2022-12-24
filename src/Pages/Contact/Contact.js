@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import MyHelmet from '../../components/MyHelmet';
 import contact from '../../images/Telecommuting-pana.png';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 
 const Contact = () => {
     const form = useRef();
@@ -12,6 +13,7 @@ const Contact = () => {
         emailjs.sendForm('service_s3bklnu', 'template_xiobz9x', form.current, 'U0g6Ht1DVmnBbENk0')
             .then((result) => {
                 console.log(result.text);
+                toast.success("Message Sent");
                 e.target.reset();
             }, (error) => {
                 console.log(error.text);
