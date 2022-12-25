@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MyHelmet from '../../components/MyHelmet';
 import img from '../../images/rsz_signin.png';
-import { MdFacebook } from 'react-icons/md'
 
 const Login = () => {
 
@@ -37,11 +36,6 @@ const Login = () => {
                             </div>
                             <input className='btn btn-secondary mt-5 text-white hover:text-opacity-50 font-bold' type="submit" value="Login" />
                         </div>
-                        <div className="divider px-8 font-bold">Or</div>
-                        <div className='flex justify-center px-8 mb-8'>
-                            <button className='btn text-white w-full flex items-center gap-3 bg-gradient-to-r from-blue-600 font-bold to-blue-300 mt-5 hover:text-opacity-50 border border-none'><MdFacebook className="text-2xl sm:block hidden" /> Join With Google</button>
-                        </div>
-
                     </form>
                 </div>
             </div>

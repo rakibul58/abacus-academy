@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../images/logo.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Header = () => {
     const [theme, setTheme] = useState('cmyk');
+    const { user, logOut } = useContext(AuthContext);
     const handleTheme = () => {
         theme === 'cmyk' ? setTheme('night') : setTheme('cmyk');
     }
@@ -12,11 +15,25 @@ const Header = () => {
         document.body.setAttribute('data-theme', theme);
     }, [theme]);
 
+    const handleLogout = () => {
+        logOut()
+            .then(result => { })
+            .catch(error => console.error(error));
+    }
+
     const navItems = <>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/'>Home</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/contact'>Contact</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/about'>About</NavLink></li>
-        <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/login'>Login</NavLink></li>
+        {
+            !user ?
+                <>
+                    <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/login'>Login</NavLink></li>
+                </> :
+                <>
+                    <li><button onClick={handleLogout} className='btn btn-primary' to='/login'>Logout</button></li>
+                </>
+        }
     </>
 
     return (
@@ -40,8 +57,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <span className='mr-2 text-lg font-semibold text-secondary'>{theme==='cmyk' ? 'Light' : 'Dark'}</span>
-                    <input type="checkbox" className="toggle toggle-md" onClick={handleTheme}/>
+                    <span className='mr-2 text-lg font-semibold text-secondary'>{theme === 'cmyk' ? 'Light' : 'Dark'}</span>
+                    <input type="checkbox" className="toggle toggle-md" onClick={handleTheme} />
                 </div>
             </div>
         </div>
