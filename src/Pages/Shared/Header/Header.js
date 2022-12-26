@@ -3,10 +3,15 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTeacher from '../../../Hooks/useTeacher';
+import useStudent from '../../../Hooks/useStudent';
 
 const Header = () => {
     const [theme, setTheme] = useState('cmyk');
     const { user, logOut } = useContext(AuthContext);
+    console.log(user?.email);
+    const [isTeacher] = useTeacher(user?.email);
+    const [isStudent] = useStudent(user?.email);
     const handleTheme = () => {
         theme === 'cmyk' ? setTheme('night') : setTheme('cmyk');
     }
@@ -17,22 +22,33 @@ const Header = () => {
 
     const handleLogout = () => {
         logOut()
-            .then(result => { })
+            .then(result => {
+             })
             .catch(error => console.error(error));
     }
+    console.log(isTeacher , isStudent);
 
     const navItems = <>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/'>Home</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/contact'>Contact</NavLink></li>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/about'>About</NavLink></li>
         {
-            !user ?
-                <>
-                    <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/login'>Login</NavLink></li>
-                </> :
-                <>
-                    <li><button onClick={handleLogout} className='btn btn-primary' to='/login'>Logout</button></li>
-                </>
+            (user && isStudent) &&
+            <>
+
+                <li><button className='btn btn-secondary btn-outline rounded-3xl text-center' to='/login'>Student</button></li>
+            </>
+        }
+        {
+            (user && isTeacher) &&
+            <>
+                <li><button className='btn btn-secondary btn-outline rounded-3xl text-center' to='/login'>Teacher</button></li>
+            </>
+        }
+        {
+            user ? <><li><button onClick={handleLogout} className='btn btn-secondary btn-outline rounded-3xl text-center' to='/login'>Logout</button></li></> : <>
+                <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/login'>Login</NavLink></li>
+            </>
         }
     </>
 

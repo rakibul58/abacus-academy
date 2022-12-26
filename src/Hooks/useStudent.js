@@ -6,10 +6,10 @@ const useStudent = email => {
     const [isStudentLoading, setIsStudentLoading] = useState(true);
     useEffect(() => {
         if (email) {
-            fetch(``)
+            fetch(`http://localhost:5000/users/student/${email}`)
                 .then(res => res.json())
                 .then(data => {
-                    setIsStudent(data.isUser);
+                    setIsStudent(data.isStudent);
                     setIsStudentLoading(false);
                 });
         }
