@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import MyHelmet from '../../components/MyHelmet';
 import { useQuery } from '@tanstack/react-query';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const AddedCourses = () => {
     // const [addedCourses, setAddedCourses] = useState([]);
@@ -85,7 +86,8 @@ const AddedCourses = () => {
                                             </td>
                                             <td>{course.post_date}</td>
                                             <th>
-                                                <button className="btn btn-warning text-white hover:bg-opacity-70 btn-xs mr-2">Details</button>
+                                                <Link to={`/addvideos/${course._id}`} className="btn btn-success text-white hover:bg-opacity-70 btn-xs mr-2">Add Video</Link>
+                                                <Link to={`/addedvideos/${course._id}`} className="btn btn-warning text-white hover:bg-opacity-70 btn-xs mr-2">Details</Link>
                                                 <button onClick={() => handleDelete(course._id)} className="btn btn-error hover:bg-opacity-70 btn-xs">Delete</button>
                                             </th>
                                         </tr>)
