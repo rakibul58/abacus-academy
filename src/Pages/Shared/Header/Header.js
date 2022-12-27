@@ -23,10 +23,10 @@ const Header = () => {
     const handleLogout = () => {
         logOut()
             .then(result => {
-             })
+            })
             .catch(error => console.error(error));
     }
-    console.log(isTeacher , isStudent);
+    console.log(isTeacher, isStudent);
 
     const navItems = <>
         <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/'>Home</NavLink></li>
@@ -35,14 +35,14 @@ const Header = () => {
         {
             (user && isStudent) &&
             <>
-
-                <li><button className='btn btn-secondary btn-outline rounded-3xl text-center' to='/login'>Student</button></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/mycourses'>My Courses</NavLink></li>
             </>
         }
         {
             (user && isTeacher) &&
             <>
-                <li><button className='btn btn-secondary btn-outline rounded-3xl text-center' to='/login'>Teacher</button></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/addcourse'>Add Course</NavLink></li>
+                <li><NavLink className={({ isActive }) => (isActive ? 'text-secondary' : '')} to='/addedcourse'>My Courses</NavLink></li>
             </>
         }
         {

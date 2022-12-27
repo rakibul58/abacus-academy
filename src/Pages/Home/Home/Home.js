@@ -15,6 +15,7 @@ const Home = () => {
     return (
         <div>
             <MyHelmet>Home</MyHelmet>
+            
             <div data-aos="fade-right">
                 <Banner></Banner>
             </div>

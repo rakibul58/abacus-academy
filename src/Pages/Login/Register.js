@@ -35,7 +35,7 @@ const Register = () => {
 
     const addUser = user => {
         // console.log(user);
-        fetch('http://localhost:5000/users', {
+        fetch('https://abacus-academy-server-swart.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
