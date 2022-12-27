@@ -9,6 +9,7 @@ import TeacherRoute from "../PrivateRoute/TeacherRoute";
 import AddCourse from "../../Pages/AddCourse/AddCourse";
 import AddedCourses from "../../Pages/AddedCourses/AddedCourses";
 import AddVideos from "../../Pages/AddVideos/AddVideos";
+import AddedVideos from "../../Pages/AddedVideos/AddedVideos";
 
 const router = createBrowserRouter([
     {
@@ -46,7 +47,12 @@ const router = createBrowserRouter([
             {
                 path: '/addedcourse',
                 element:<TeacherRoute><AddedCourses></AddedCourses></TeacherRoute>
-            }
+            },
+            {
+                path: '/addedvideos/:id',
+                element:<TeacherRoute><AddedVideos></AddedVideos></TeacherRoute>
+            },
+            
         ]
     }
 ]);

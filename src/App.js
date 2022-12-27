@@ -5,7 +5,7 @@ import router from './Router/Routes/Routes';
 
 function App() {
   return (
-    <div className='max-w-screen-xl mx-auto'>
+    <div className='max-w-screen-xl mx-auto' style={{minHeight:"100vh"}}>
         <RouterProvider router={router}></RouterProvider>
         <Toaster/>
     </div>

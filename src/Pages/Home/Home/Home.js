@@ -7,6 +7,7 @@ import Contact from '../../Contact/Contact';
 import About from '../../About/About';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AllCourses from '../AllCourses/AllCourses';
 
 const Home = () => {
     useEffect(() => {
@@ -14,23 +15,27 @@ const Home = () => {
     }, []);
     return (
         <div>
-            <MyHelmet>Home</MyHelmet>
             
+
             <div data-aos="fade-right">
                 <Banner></Banner>
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-left" style={{margin:"150px 0"}}>
+                <AllCourses></AllCourses>
+            </div>
+            <div data-aos="fade-right">
                 <CoreFeatures></CoreFeatures>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-left">
                 <Info></Info>
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-right">
                 <Contact></Contact>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-left">
                 <About></About>
             </div>
+            <MyHelmet>Home</MyHelmet>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import img2 from '../../../images/2.jpg';
 import img3 from '../../../images/3.jpg';
 import img5 from '../../../images/5.jpg';
 import BannerItems from './BannerItems';
+import MyHelmet from '../../../components/MyHelmet';
 
 const Banner = () => {
     const bannerData = [
@@ -35,6 +36,7 @@ const Banner = () => {
     ]
     return (
         <div className="carousel w-full py-10">
+            <MyHelmet>Home</MyHelmet>
             {
                 bannerData.map(slide => <BannerItems
                 key={slide.id} 
