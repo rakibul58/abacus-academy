@@ -6,7 +6,7 @@ const useTeacher = email => {
     const [isTeacherLoading, setIsTeacherLoading] = useState(true);
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:5000/users/teacher/${email}`)
+            fetch(`https://abacus-academy-server-swart.vercel.app/users/teacher/${email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
