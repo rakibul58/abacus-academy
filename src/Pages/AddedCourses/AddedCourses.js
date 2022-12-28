@@ -14,7 +14,7 @@ const AddedCourses = () => {
         queryKey: ['addedCourses'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/courses?email=${user?.email}`);
+                const res = await fetch(`https://abacus-academy-server-swart.vercel.app/courses?email=${user?.email}`);
                 const data = res.json();
                 return data;
             } catch (error) {
@@ -27,7 +27,7 @@ const AddedCourses = () => {
 
     const handleDelete = id => {
 
-        fetch(`http://localhost:5000/courses/${id}`, {
+        fetch(`https://abacus-academy-server-swart.vercel.app/courses/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

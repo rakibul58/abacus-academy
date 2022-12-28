@@ -20,7 +20,7 @@ const Home = () => {
             <div data-aos="fade-right">
                 <Banner></Banner>
             </div>
-            <div data-aos="fade-left" style={{margin:"150px 0"}}>
+            <div data-aos="fade-left">
                 <AllCourses></AllCourses>
             </div>
             <div data-aos="fade-right">

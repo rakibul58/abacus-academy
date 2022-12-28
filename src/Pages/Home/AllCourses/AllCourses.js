@@ -8,13 +8,13 @@ const AllCourses = () => {
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allcourses')
+        fetch('https://abacus-academy-server-swart.vercel.app/allcourses')
             .then(res => res.json())
             .then(data => setCourses(data));
     }, []);
 
     return (
-        <div className='w-full'>
+        <div className='w-full my-44'>
             <div className='text-center'>
                 <h4 className='font-bold text-2xl text-error'>Courses</h4>
                 <h1 className='text-4xl text-semibold'>These are all of our available courses</h1>
