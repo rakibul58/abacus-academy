@@ -14,7 +14,7 @@ const AddedVideos = () => {
         queryKey: ['course'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/courses/${id}`);
+                const res = await fetch(`https://abacus-academy-server-swart.vercel.app/courses/${id}`);
                 const data = res.json();
                 return data;
             } catch (error) {
@@ -27,7 +27,7 @@ const AddedVideos = () => {
         queryKey: ['videos'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/videos/${id}`);
+                const res = await fetch(`https://abacus-academy-server-swart.vercel.app/videos/${id}`);
                 const data = res.json();
                 return data;
             } catch (error) {
@@ -40,7 +40,7 @@ const AddedVideos = () => {
 
     const handleDelete = id => {
 
-        fetch(`http://localhost:5000/videos/${id}`, {
+        fetch(`https://abacus-academy-server-swart.vercel.app/videos/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
