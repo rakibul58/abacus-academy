@@ -1,4 +1,4 @@
-# Abacus Academy Client
+# Abacus Academy
 
 [Live Site](https://new-abacus-academy.web.app/)
 
